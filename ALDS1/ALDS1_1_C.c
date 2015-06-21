@@ -2,33 +2,31 @@
 #include <math.h>
 
 int main(){
-  int n,a=0;
+  int n,m=0;
   long A[10000];
   scanf("%d", &n);
   for(int i=0;i<n;i++){
     scanf("%ld", &A[i+1]);
-    a=a+isPlime(A[i+1]);
+    //printf("set1:%d\n", A[i+1]);
+    //printf("set2:%d %lf\n", A[i+1],sqrt((double)(A[i+1])));
+    //printf("set2:%d %d\n", A[i+1],(int)(sqrt((double)(A[i+1]))));
+    //printf("set3:%d\n", isPlime(A[i+1]));
+
+    m=m+isPlime(A[i+1]);
   }
 
-  printf("%d\n",a);
+  printf("%d\n",m);
   return 0;
 }
-int isPlime(long a){
-	int x;
-  if(a==2){x=1;}
-  else if(a==3){x=1;}
-  else if(a==4){x=0;}
-  else if(a==5){x=1;}
-  else if(a%2==0){x=0;}
+int isPlime(long n){
+  int i=3;
+  if(n==2)return 1;
+  else if(n<2 || (n%2)==0)return 0;
   else{
+    while(i<=(int)sqrt((long)n)){
+      if((n%i)==0)return 0;
+      i= i+2;
+      }}
+     return 1;
 
-    for(int i=3;i<(int)sqrt((double)a);i++){
-      if(a%i==0){
-        x=0;
-        printf("sq:%d %d\n",a%i,i);
-      }else{x=0;}
-    }
-    x=0;
-    }
-	return x;
 }
