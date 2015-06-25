@@ -1,15 +1,15 @@
 #include<stdio.h>
 int main(){
 	int n, m, i, j, k;
-	int id, tanka, count;
+	long id; long tanka, count;
 	//int ID[4000],URI[4000];
-	int R_ID[4000];
+	long R_ID[4000];
 	m = 0;
 	scanf("%d", &n);
 	while (n != 0){
 		//get count
-		int ID[4000] = {};
-		int URI[4000] = {};
+		long ID[4000] = {0};
+		long URI[4000] = {0};
 		//get dataset
 		for (i = 0; i<n; i++){
 			scanf("%d %d %d", &id, &tanka, &count);
