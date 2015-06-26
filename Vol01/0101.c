@@ -2,15 +2,13 @@
 #include<string.h>
 int main(){
   int n,i;
-  char str1[1028];
-  char *str2;
+  char str[1000];
   scanf("%d\n", &n);
   for(i=0;i<n;i++){
-    gets(str1);
-    while ((str2 = strstr(str1, "Hoshino")) != NULL){
-      strncpy(strstr(str1,"Hoshino"),"Hoshina",7);
-    }
-    printf("%s\n", str1);
+    gets(str);
+    while (strstr(str, "Hoshino")!=NULL)
+      strncpy(strstr(str,"Hoshino"),"Hoshina",7);
+    printf("%s\n", str);
   }
     return 0;
 }
