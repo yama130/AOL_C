@@ -3,7 +3,7 @@
 int main(){
   int n,i;
   char str[1000][1028];
-    scanf("%d\n", &n);
+  scanf("%d\n", &n);
   for(i=0;i<n;i++){
     fgets(str[i],sizeof(str[i]),stdin);
     //scanf("%s\n", &str[i]);
