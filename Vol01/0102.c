@@ -1,28 +1,32 @@
 #include<stdio.h>
 int main(){
   int n,i,j;
-  long cel[11][11],ttl[11];
+  //format
+  int cel[11],ttl[11];
   scanf("%ld\n", &n);
   while (n != 0){
+    for(i=0;i<n+1;i++){
+      cel[i]=0;ttl[i]=0;
+    }
     for(i=0;i<n;i++){
-      cel[i][n]=0;
       for(j=0;j<n;j++){
-        scanf("%ld", &cel[i][j]);
+        scanf("%d", &cel[j]);
       }
       for(j=0;j<n;j++){
-        printf("%ld ", cel[i][j]);
-        cel[i][n]+=cel[i][j];
-        ttl[j]+=cel[i][j];
+        printf("%5d", cel[j]);
+        cel[n]+=cel[j];
+        ttl[j]+=cel[j];
+        ttl[n]+=cel[j];
       }
-      printf("%ld\n", cel[i][n]);
+      printf("%5d\n", cel[n]);
+      cel[n]=0;
     }
     //total
     for(i=0;i<n;i++){
-      printf("%ld ", ttl[i]);
-      ttl[n]+=ttl[i];
+      printf("%5d", ttl[i]);
     }
-    printf("%ld\n", ttl[n]);
-    scanf("%ld", &n);
+    printf("%5d\n", ttl[n]);
+    scanf("%d", &n);
   }
   return 0;
 }
