@@ -21,8 +21,7 @@ int main(){
       out+=1;
       // printf("out:%d\n",out);
       if(out==3){
-        out=0;hit=0;
-        n+=1;
+        out=0;hit=0;n+=1;
         printf("%d\n", pnt);
         pnt=0;
       }
