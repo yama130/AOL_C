@@ -1,0 +1,3 @@
+@ECHO OFF
+%~n0
+PAUSE
