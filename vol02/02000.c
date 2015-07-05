@@ -1,14 +1,13 @@
 #include <stdio.h>
-// #define min(x, y) ((x) < (y) ? (x) : (y))
+#define min(x, y) ((x) < (y) ? (x) : (y))
 #define INF 1e8
-int min(int a,int b){
-    return a>b?b:a;}
+
 int main(){
 	int i,j,k,l;
-	int n,rt,m;
+	int n,rt;
 	int frSt,toSt,coVal,tiVal;
-	int val[2][101][101];
-	int stSt,glSt,chTyp;
+	int h,val[2][101][101];
+	int m,stSt,glSt,chTyp;
 	while (1) {
 		//1stRecGet
 		scanf("%d %d", &n, &rt);
@@ -29,7 +28,7 @@ int main(){
 			for(k=0;k<=rt;k++){
 				for(l=0;l<=rt;l++){
 					val[0][k][l]=min(val[0][k][l],val[0][k][j]+val[0][j][l]);
-					val[1][k][l]=min(val[1][k][l],val[1][k][j]+val[1][j][l]);
+					val[1][k][l]=min(val[1][k][l],val[1][l][j]+val[1][j][l]);
 		}}}
 
 		// root-get
