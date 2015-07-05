@@ -1,8 +1,7 @@
 #include <stdio.h>
-// #define min(x, y) ((x) < (y) ? (x) : (y))
+#define min(x, y) ((x) < (y) ? (x) : (y))
 #define INF 1e8
-int min(int a,int b){
-    return a>b?b:a;}
+
 int main(){
 	int i,j,k,l;
 	int n,rt,m;
@@ -14,7 +13,7 @@ int main(){
 		scanf("%d %d", &n, &rt);
 		if(n==0 && rt==0)break;
 		//root-format
-		for(i=0;i<rt;i++){
+		for(i=0;i<=rt;i++){
 			for(j=0;j<=rt;j++){
 				val[0][i][j]=INF;val[1][i][j]=INF;
 		}}
